@@ -1,21 +1,16 @@
 package com.ooommm.seifvoicerec.listRecord
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.fragment.app.FragmentTransaction
-import android.widget.TimePicker
 import android.widget.Toast
-import androidx.fragment.app.FragmentActivity
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.util.findColumnIndexBySuffix
-import androidx.transition.FragmentTransitionSupport
 import com.ooommm.seifvoicerec.R
 import com.ooommm.seifvoicerec.database.RecordingItem
 import com.ooommm.seifvoicerec.player.PlayerFragment
@@ -37,6 +32,7 @@ class ListRecordAdapter : RecyclerView.Adapter<ListRecordAdapter.ViewHolder>() {
         var vLength: TextView = itemView.findViewById(R.id.file_length_text)
         var cardView: CardView = itemView.findViewById(R.id.card_view)
         var ivTrash: ImageView = itemView.findViewById(R.id.iv_trash)
+        var reRecording: ImageView = itemView.findViewById(R.id.re_recording)
 
         companion object {
             fun from(parent: ViewGroup): ViewHolder {

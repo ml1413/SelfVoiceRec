@@ -10,6 +10,7 @@ import androidx.navigation.ui.NavigationUI
 import com.ooommm.seifvoicerec.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

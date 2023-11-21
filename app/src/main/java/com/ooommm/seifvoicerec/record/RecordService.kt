@@ -3,6 +3,7 @@ package com.ooommm.seifvoicerec.record
 import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_IMMUTABLE
 import android.app.Service
 import android.content.Intent
 import android.media.MediaRecorder
@@ -84,10 +85,9 @@ class RecordService : Service() {
             PendingIntent.getActivities(
                 applicationContext, 0, arrayOf(
                     Intent(
-                        applicationContext,
-                        MainActivity::class.java
+                        applicationContext, MainActivity::class.java
                     )
-                ), 0
+                ), FLAG_IMMUTABLE
             )
         )
         return mBuilder.build()
